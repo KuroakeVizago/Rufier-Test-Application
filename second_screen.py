@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import (
     QPushButton, QLabel, QVBoxLayout, QLineEdit, QHBoxLayout)
 
 from instr import *
+from final_screen import *
 
 class TestWin(QWidget):
     def __init__(self):
@@ -33,7 +34,7 @@ class TestWin(QWidget):
         self.text_test2 = QLabel(txt_test2)
         self.text_test3 = QLabel(txt_test3)
         self.text_timer = QLabel(txt_timer)
-        
+
         self.line_name = QLineEdit(txt_hintname)
         self.line_age = QLineEdit(txt_hintage)
         self.line_test1 = QLineEdit(txt_hinttest1)
@@ -63,4 +64,8 @@ class TestWin(QWidget):
         self.setLayout(self.h_line)
 
     def connects(self):
-        pass
+        self.btn_next.clicked.connect(self.next_click)
+
+    def next_click(self):
+        self.final_win = FinalWindow()
+        self.hide()

@@ -75,7 +75,13 @@ class TestWin(QWidget):
         self.btn_test3.clicked.connect(self.timer_final)
 
     def next_click(self):
-        self.final_win = FinalWindow()
+        self.exp = Experiment(
+            int(self.line_age.text()),
+            int(self.line_test1.text()),
+            int(self.line_test2.text()),
+            int(self.line_test3.text())
+        )
+        self.final_win = FinalWindow(self.exp)
         self.hide()
 
     def timer_test(self):

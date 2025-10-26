@@ -42,6 +42,7 @@ class MainWindow(QWidget):
         
 
 
+
 app = QApplication([])
 mw = MainWindow()
 app.exec_()

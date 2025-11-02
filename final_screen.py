@@ -22,7 +22,6 @@ class FinalWindow(QWidget):
         self.initUI() # membuat dan mengkonfigurasi elemen grafis
         self.show() # start
         
-
     def results(self):
         if self.exp.age < 7:
            self.index = 0
